@@ -1,16 +1,26 @@
 import { useAppStore } from "../store"
+import countDaysInMonth from "../helpers/count-days-in-month";
 
 function HabitTable() {
-  const numDays = (y: number, m: number) => new Date(y, m, 0).getDate()
+  const { numberOfRows } = useAppStore()
+
 
   const currentDate = new Date()
-  const numberOfDays = numDays(currentDate.getFullYear(), currentDate.getMonth() + 1)
+  const weekday = ["S","M","T","W","T","F","S"];
 
-  const { numberOfRows } = useAppStore()
+  const year = currentDate.getFullYear()
+  const month = currentDate.getMonth()
+  const numberOfDays = countDaysInMonth(year, month)
+
+  const getDayOfWeekLetter = (year: number, month: number, day: number) => {
+    const date = new Date(year, month, day)
+
+    return weekday[date.getDay()]
+  }
 
   return (
     <div>
-      <table className='habit-table table-auto'>
+      <table className='habit-table table-auto border-collapse'>
         <thead>
           <tr>
             <th
@@ -20,7 +30,12 @@ function HabitTable() {
             { [...Array(numberOfDays)].map((_, i) => {
               return (
                 <th className="h-7 w-7 min-w-7">
-                  {i + 1}
+                  <div>
+                    {i + 1}
+                  </div>
+                  <div>
+                    {getDayOfWeekLetter(year, month, i + 1)}
+                  </div>
                 </th>
               )
             }) }
