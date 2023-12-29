@@ -3,34 +3,17 @@
 @tailwind utilities;
 
 @layer components {
-  .habit-table {
-    @apply table-fixed;
-  }
-
-  .habit-table th:first-child {
-    @apply w-64;
-    @apply pl-4;
-    @apply text-left;
-  }
-
   .habit-table td,
   .habit-table th {
-    @apply p-0;
-    @apply w-8;
-    @apply h-8;
-    @apply shrink-0;
-
     @apply border-solid;
     @apply border-[1px];
     @apply border-slate-200;
 
-    @apply text-xs;
+    @apply text-[10px];
     @apply font-light;
     @apply tracking-tighter;
-    @apply text-center;
     @apply text-slate-400;
   }
-
 }
 
 @media print {
@@ -45,7 +28,8 @@
   @page {
     size: A4 landscape;
     max-height: 100%;
-    max-width: 100%
+    max-width: 100%;
+    margin: 16px;
 	}
 
   * {

@@ -9,39 +9,40 @@ function HabitTable() {
   const { numberOfRows } = useAppStore()
 
   return (
-    <>
-      <div>
-        <table className='habit-table'>
-          <thead>
-            <tr>
-              <th><span className="text-[12px] text-slate-300">MONTH</span></th>
-              { [...Array(numberOfDays)].map((_, i) => {
-                return (
-                  <th>
-                    {i + 1}
-                  </th>
-                )
-              }) }
-            </tr>
-          </thead>
-          <tbody>
-            { [...Array(numberOfRows)].map(() => {
+    <div>
+      <table className='habit-table table-auto'>
+        <thead>
+          <tr>
+            <th
+              className="w-full h-7 pl-4 text-left">
+              <span className="text-[10px] text-slate-300">MONTH</span>
+            </th>
+            { [...Array(numberOfDays)].map((_, i) => {
               return (
-                <tr>
-                  <td></td>
-                  { [...Array(numberOfDays)].map(() => {
-                    return (
-                      <td>
-                      </td>
-                    )
-                  }) }
-                </tr>
+                <th className="h-7 w-7 min-w-7">
+                  {i + 1}
+                </th>
               )
             }) }
-          </tbody>
-        </table>
-      </div>
-    </>
+          </tr>
+        </thead>
+        <tbody>
+          { [...Array(numberOfRows)].map(() => {
+            return (
+              <tr>
+                <td className="w-7 h-7"></td>
+                { [...Array(numberOfDays)].map(() => {
+                  return (
+                    <td className="w-7 h-7">
+                    </td>
+                  )
+                }) }
+              </tr>
+            )
+          }) }
+        </tbody>
+      </table>
+    </div>
   )
 }
 
