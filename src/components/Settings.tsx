@@ -13,7 +13,7 @@ function Settings({ className }: { className: string }) {
   }
 
   return (
-    <div className={`bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
+    <div className={`relative bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
       <div className="flex items-center mb-6">
         <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
           Number of rows
@@ -40,6 +40,13 @@ function Settings({ className }: { className: string }) {
             onChange={(e) => setWritingSectionsEnabled(e.target.checked)} />
         </div>
       </div>
+
+      <button
+        onClick={() => { print()} }
+        className="absolute right-4 top-4
+          rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+        PRINT
+      </button>
     </div>
   )
 }
