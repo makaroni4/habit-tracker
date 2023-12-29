@@ -13,14 +13,16 @@ function HabitTable() {
       <div>
         <table className='habit-table'>
           <thead>
-            <td><span className="text-[12px] text-slate-300">MONTH</span></td>
-            { [...Array(numberOfDays)].map((_, i) => {
-              return (
-                <td>
-                  {i + 1}
-                </td>
-              )
-            }) }
+            <tr>
+              <th><span className="text-[12px] text-slate-300">MONTH</span></th>
+              { [...Array(numberOfDays)].map((_, i) => {
+                return (
+                  <th>
+                    {i + 1}
+                  </th>
+                )
+              }) }
+            </tr>
           </thead>
           <tbody>
             { [...Array(numberOfRows)].map(() => {

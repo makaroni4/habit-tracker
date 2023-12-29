@@ -4,26 +4,22 @@
 
 @layer components {
   .habit-table {
-    @apply w-full;
     @apply table-fixed;
-
-    @apply border-solid;
-    @apply border-[1px];
-    @apply border-slate-200;
-
-    @apply text-sm;
-    @apply font-light;
   }
 
-  .habit-table thead td:first-child {
+  .habit-table th:first-child {
     @apply w-64;
     @apply pl-4;
     @apply text-left;
-    @apply tracking-normal;
-    @apply text-slate-600;
   }
 
-  .habit-table thead td:not(:first-child) {
+  .habit-table td,
+  .habit-table th {
+    @apply p-0;
+    @apply w-8;
+    @apply h-8;
+    @apply shrink-0;
+
     @apply border-solid;
     @apply border-[1px];
     @apply border-slate-200;
@@ -32,24 +28,9 @@
     @apply font-light;
     @apply tracking-tighter;
     @apply text-center;
+    @apply text-slate-400;
   }
 
-  .habit-table thead td,
-  .habit-table tbody td {
-    @apply p-0;
-    @apply h-8;
-    @apply shrink-0;
-
-    @apply border-solid;
-    @apply border-[1px];
-    @apply border-slate-200;
-
-    @apply text-slate-600;
-  }
-
-  .habit-table td {
-    @apply w-8;
-  }
 }
 
 @media print {
