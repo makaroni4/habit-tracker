@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .habit-table {
+    @apply w-full;
+    @apply table-fixed;
+
+    @apply border-solid;
+    @apply border-[1px];
+    @apply border-slate-200;
+
+    @apply text-sm;
+    @apply font-light;
+  }
+
+  .habit-table thead td:first-child {
+    @apply w-64;
+    @apply pl-4;
+    @apply text-left;
+    @apply tracking-normal;
+    @apply text-slate-600;
+  }
+
+  .habit-table thead td:not(:first-child) {
+    @apply border-solid;
+    @apply border-[1px];
+    @apply border-slate-200;
+
+    @apply text-xs;
+    @apply font-light;
+    @apply tracking-tighter;
+    @apply text-center;
+  }
+
+  .habit-table thead td,
+  .habit-table tbody td {
+    @apply p-0;
+    @apply h-8;
+    @apply shrink-0;
+
+    @apply border-solid;
+    @apply border-[1px];
+    @apply border-slate-200;
+
+    @apply text-slate-600;
+  }
+
+  .habit-table td {
+    @apply w-8;
+  }
+}
+
+@media print {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    size: A4 landscape;
+    max-height: 100%;
+    max-width: 100%
+	}
+
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
