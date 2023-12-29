@@ -13,12 +13,12 @@ function Settings({ className }: { className: string }) {
   }
 
   return (
-    <div className={`mb-8 bg-slate-100 p-8 print:hidden ${className}`}>
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+    <div className={`bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
+      <div className="flex items-center mb-6">
+        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
           Number of rows
         </label>
-        <div className="mt-2">
+        <div className="">
           <input
             type="text"
             value={numberOfRows}
@@ -28,11 +28,18 @@ function Settings({ className }: { className: string }) {
         </div>
       </div>
 
-      <input
-        type="checkbox"
-        value="1"
-        checked={writingSectionsEnabled}
-        onChange={(e) => setWritingSectionsEnabled(e.target.checked)} />
+      <div className="flex items-center mr-8">
+        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
+          Writing sections
+        </label>
+        <div>
+          <input
+            type="checkbox"
+            value="1"
+            checked={writingSectionsEnabled}
+            onChange={(e) => setWritingSectionsEnabled(e.target.checked)} />
+        </div>
+      </div>
     </div>
   )
 }

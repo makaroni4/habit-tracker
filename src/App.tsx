@@ -4,7 +4,7 @@ import Settings from "./components/Settings"
 function App() {
   return (
     <div className="screen:container p-8 print:p-0">
-      <Settings />
+      <Settings className="mb-8" />
 
       <HabitTracker />
     </div>
