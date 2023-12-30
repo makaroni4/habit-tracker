@@ -12,7 +12,7 @@ export default function Footer({ className }: { className: string}) {
         <div className="mb-4 md:mb-0">
           <a
             className="flex mb-3 mr-4 underline"
-            href="https://github.com/makaroni4/habit-tracker-generator"
+            href="https://github.com/makaroni4/habit-tracker"
           >
             <GithubIcon
               className="w-4 mr-2"/>
@@ -20,7 +20,7 @@ export default function Footer({ className }: { className: string}) {
           </a>
           <a
             className="block underline"
-            href="https://github.com/makaroni4/habit-tracker-generator/issues"
+            href="https://github.com/makaroni4/habit-tracker/issues"
           >
             Feedback
           </a>

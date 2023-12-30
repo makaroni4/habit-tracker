@@ -10,7 +10,7 @@ function Navbar({ className }: { className: string }) {
 
       <a
         target="_blank"
-        href="https://github.com/makaroni4/habit-tracker-generator">
+        href="https://github.com/makaroni4/habit-tracker">
         <GithubIcon
           className="h-8 md:h-12 hover:opacity-70" />
       </a>
