@@ -1,6 +1,7 @@
 import HabitTracker from "./components/HabitTracker"
 import Settings from "./components/Settings"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         className="rounded-full bg-indigo-600 px-12 py-4 text-lg font-semibold text-white shadow-sm tracking-wider hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-6500 print:hidden">
         PRINT
       </button>
+
+      <Footer
+        className="print:hidden mt-24" />
     </div>
   )
 }
