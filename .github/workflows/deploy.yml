@@ -27,7 +27,7 @@ jobs:
       run: npm ci
 
     - name: Run linting
-      run: npm run lint:eslint
+      run: npm run lint
 
   build:
     runs-on: ubuntu-latest
