@@ -19,7 +19,7 @@ function Settings({ className }: { className: string }) {
   }
 
   return (
-    <div className={`relative bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
+    <div className={`bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
       <div className="flex items-center mb-6">
         <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
           Number of rows
@@ -90,13 +90,6 @@ function Settings({ className }: { className: string }) {
             className="absolute w-4 h-4 top-1/2 -translate-y-1/2 right-2"/>
         </div>
       </div>
-
-      <button
-        onClick={() => { print()} }
-        className="absolute right-4 bottom-4
-          rounded-md bg-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-6500">
-        PRINT
-      </button>
     </div>
   )
 }
