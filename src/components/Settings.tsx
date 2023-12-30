@@ -25,8 +25,8 @@ function Settings({ className }: { className: string }) {
         </div>
       </div>
 
-      <div className="flex items-center mb-8">
-        <div className="flex items-center mr-6">
+      <div className="md:flex items-center mb-8">
+        <div className="flex items-center mb-6 md:mb-0 md:mr-6">
           <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
             Year
           </label>
