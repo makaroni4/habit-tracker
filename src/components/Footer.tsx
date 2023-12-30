@@ -14,7 +14,8 @@ export default function Footer({ className }: { className: string}) {
             className="flex mb-3 mr-4 underline"
             href="https://github.com/makaroni4/habit-tracker-generator"
           >
-            <GithubIcon  className="w-4 mr-2"/>
+            <GithubIcon
+              className="w-4 mr-2"/>
             Source code
           </a>
           <a

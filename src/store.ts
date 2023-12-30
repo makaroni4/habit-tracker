@@ -26,8 +26,7 @@ const extractNumericValue = (input: number | string, defaultValue: number = 0): 
 
 export const useAppStore = create<AppStore>()(
   persist(
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (set, get) => ({
+    (set) => ({
       numberOfRows: 10,
       setNumberOfRows: (key) => set({ numberOfRows: extractNumericValue(key) }),
       writingSectionsNumber: 2,

@@ -9,7 +9,7 @@ export default function Markdownify({
   className?: string
   children: string
 }) {
-  const stripIndent = (str: React.ReactNode | string): string => {
+  const stripIndent = (str: string): string => {
     if(!str) {
       return ""
     }
