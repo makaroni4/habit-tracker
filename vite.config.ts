@@ -8,4 +8,5 @@ export default defineConfig({
     svgr({ include: '**/*.svg' }),
     react()
   ],
+  base: "/habit-tracker/"
 })
