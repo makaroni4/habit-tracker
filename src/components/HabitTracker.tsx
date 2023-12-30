@@ -7,7 +7,7 @@ function HabitTracker() {
   const { writingSectionsEnabled } = useAppStore()
 
   return (
-    <div className="print:absolute top-0 left-0 screen:h-[842px] print:h-screen overflow-hidden">
+    <div className="print:absolute top-0 left-0 screen:h-[700px] print:h-screen overflow-hidden">
       <div className="mb-6">
         <HabitTable />
       </div>

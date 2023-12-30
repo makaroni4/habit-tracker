@@ -2,14 +2,10 @@ import { useAppStore } from "../store"
 import countDaysInMonth from "../helpers/count-days-in-month";
 
 function HabitTable() {
-  const { numberOfRows } = useAppStore()
+  const { year, month, numberOfRows } = useAppStore()
 
-
-  const currentDate = new Date()
   const weekday = ["S","M","T","W","T","F","S"];
 
-  const year = currentDate.getFullYear()
-  const month = currentDate.getMonth()
   const numberOfDays = countDaysInMonth(year, month)
 
   const getDayOfWeekLetter = (year: number, month: number, day: number) => {

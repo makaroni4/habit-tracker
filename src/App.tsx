@@ -6,7 +6,7 @@ function App() {
     <div className="screen:container p-8 print:p-0">
       <Settings className="mb-8" />
 
-      <div className="screen:p-4 screen:border-[1px] border-dashed border-indigo-500 rounded-md">
+      <div className="screen:p-4 screen:border-[1px] border-dashed border-slate-400 rounded-md">
         <HabitTracker />
       </div>
     </div>
