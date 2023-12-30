@@ -1,14 +1,11 @@
 import HabitTracker from "./components/HabitTracker"
 import Settings from "./components/Settings"
-import Logo from "./assets/logo.svg?react"
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
     <div className="screen:container p-8 print:p-0">
-      <header className="mb-8">
-        <Logo
-          className="h-8" />
-      </header>
+      <Navbar className="mb-8" />
 
       <Settings className="mb-8" />
 
