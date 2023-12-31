@@ -12,18 +12,18 @@ function Settings({ className }: { className: string }) {
 
   return (
     <div className={`bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
-      <div className="flex items-center mr-8 mb-8">
-        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
-          Add header section
-        </label>
-        <div>
-          <input
-            type="checkbox"
-            value="1"
-            checked={headlineEnabled}
-            onChange={(e) => setHeadlineEnabled(e.target.checked)} />
-        </div>
-      </div>
+      <label
+        htmlFor="header_section_enabled"
+        className="flex items-center mb-8 text-sm font-medium leading-6 text-gray-900 mr-4 cursor-pointer">
+        <span className="mr-4">Add header section</span>
+        <input
+          className="cursor-pointer"
+          type="checkbox"
+          value="1"
+          id="header_section_enabled"
+          checked={headlineEnabled}
+          onChange={(e) => setHeadlineEnabled(e.target.checked)} />
+      </label>
 
       <div className="md:flex items-center mb-8">
         <div className="flex items-center mb-6 md:mb-0 md:mr-6">
