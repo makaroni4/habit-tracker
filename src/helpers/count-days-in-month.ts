@@ -1,1 +1,1 @@
-export default (y: number, m: number) => new Date(y, m + 1, 0).getDate()
+export default (year: number, monthIndex: number) => new Date(year, monthIndex + 1, 0).getDate()

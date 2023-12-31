@@ -5,7 +5,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["vite/client", "vite-plugin-svgr/client", "@types/react"],
+    "types": ["vite/client", "vite-plugin-svgr/client", "@types/react", "jest"],
+    "esModuleInterop": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
