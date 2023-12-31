@@ -17,9 +17,9 @@ function HabitTracker() {
       { writingSectionsNumber > 0 && (
         <div
           className={`grid grid-cols-${writingSectionsNumber} gap-6 w-full h-full`}>
-          { [...Array(writingSectionsNumber)].map(() => {
+          { [...Array(writingSectionsNumber)].map((_, i) => {
             return (
-              <div className={`w-full h-full bg-slate-100`}></div>
+              <div key={i} className={`w-full h-full bg-slate-100`}></div>
             )
           })}
         </div>

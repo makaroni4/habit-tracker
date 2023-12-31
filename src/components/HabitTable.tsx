@@ -25,7 +25,9 @@ function HabitTable() {
             </th>
             { [...Array(numberOfDays)].map((_, i) => {
               return (
-                <th className="h-7 w-7 min-w-7">
+                <th
+                  key={i}
+                  className="h-7 w-7 min-w-7">
                   <div>
                     {i + 1}
                   </div>
@@ -38,13 +40,13 @@ function HabitTable() {
           </tr>
         </thead>
         <tbody>
-          { [...Array(numberOfRows)].map(() => {
+          { [...Array(numberOfRows)].map((_, i) => {
             return (
-              <tr>
+              <tr key={i}>
                 <td className="w-7 h-7"></td>
-                { [...Array(numberOfDays)].map(() => {
+                { [...Array(numberOfDays)].map((_, i) => {
                   return (
-                    <td className="w-7 h-7">
+                    <td key={i} className="w-7 h-7">
                     </td>
                   )
                 }) }
