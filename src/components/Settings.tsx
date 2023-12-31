@@ -14,7 +14,7 @@ function Settings({ className }: { className: string }) {
     <div className={`bg-slate-100 rounded-md p-8 print:hidden ${className}`}>
       <div className="flex items-center mr-8 mb-8">
         <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900 mr-4">
-          Add headline
+          Add header section
         </label>
         <div>
           <input

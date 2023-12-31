@@ -17,7 +17,11 @@ Generate your custom printable Habit Tracker.
 
 ## How it works?
 
-TBD
+1. Visit Habit Tracker website: https://makaroni4.github.io/habit-tracker/
+2. Select calendar month.
+3. Set the number of habits you want to track.
+4. Enable/disable blank sections (I use them to add checklists, monthly goals, etc).
+5. Save your Habit Tracker as a single page PDF file.
 
 ## Contributing
 
