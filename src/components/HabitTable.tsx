@@ -16,12 +16,12 @@ function HabitTable() {
 
   return (
     <div>
-      <table className='habit-table table-auto border-collapse'>
+      <table className='habit-table table-fixed border-collapse'>
         <thead>
           <tr>
             <th
               className="w-full h-7 pl-4 text-left">
-              <span className="text-[10px] text-slate-300">MONTH</span>
+              <span className="text-[10px] text-slate-200">MONTH</span>
             </th>
             { [...Array(numberOfDays)].map((_, i) => {
               return (
