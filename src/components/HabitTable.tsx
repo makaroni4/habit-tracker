@@ -8,6 +8,13 @@ function HabitTable() {
 
   const numberOfDays = countDaysInMonth(year, month)
 
+  const getMonthLabel = (year: number, monthNumber: number) => {
+    const date = new Date(2024, monthNumber);
+    const monthName = date.toLocaleString("en-US", { month: "short" });
+
+    return `${monthName} ${year}`.toUpperCase()
+  }
+
   const getDayOfWeekLetter = (year: number, month: number, day: number) => {
     const date = new Date(year, month, day)
 
@@ -21,7 +28,7 @@ function HabitTable() {
           <tr>
             <th
               className="w-full h-7 pl-4 text-left">
-              <span className="text-[10px] text-slate-300">MONTH</span>
+              <span className="text-[12px] text-slate-400">{ getMonthLabel(year, month) }</span>
             </th>
             { [...Array(numberOfDays)].map((_, i) => {
               return (
