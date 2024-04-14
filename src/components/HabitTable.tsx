@@ -23,7 +23,7 @@ function HabitTable() {
 
   return (
     <div>
-      <table className='habit-table table-auto border-collapse'>
+      <table className='habit-table table-fixed border-collapse'>
         <thead>
           <tr>
             <th

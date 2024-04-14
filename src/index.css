@@ -5,14 +5,17 @@
 @layer components {
   .habit-table td,
   .habit-table th {
-    @apply border-solid;
-    @apply border-[1px];
-    @apply border-slate-200;
-
     @apply text-[10px];
     @apply font-light;
     @apply tracking-tighter;
     @apply text-slate-400;
+  }
+
+  .habit-table tr,
+  .habit-table td,
+  .habit-table th {
+    border: 1px solid !important;
+    @apply border-slate-400;
   }
 }
 
